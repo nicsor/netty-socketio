@@ -78,20 +78,20 @@ public class SocketIOChannelInitializer extends ChannelInitializer<Channel> impl
 
     private static final Logger log = LoggerFactory.getLogger(SocketIOChannelInitializer.class);
 
-    private AckManager ackManager;
+    protected AckManager ackManager;
 
-    private ClientsBox clientsBox = new ClientsBox();
-    private AuthorizeHandler authorizeHandler;
-    private PollingTransport xhrPollingTransport;
-    private WebSocketTransport webSocketTransport;
-    private EncoderHandler encoderHandler;
-    private WrongUrlHandler wrongUrlHandler;
+    protected ClientsBox clientsBox = new ClientsBox();
+    protected AuthorizeHandler authorizeHandler;
+    protected PollingTransport xhrPollingTransport;
+    protected WebSocketTransport webSocketTransport;
+    protected EncoderHandler encoderHandler;
+    protected WrongUrlHandler wrongUrlHandler;
 
-    private CancelableScheduler scheduler = new HashedWheelTimeoutScheduler();
+    protected CancelableScheduler scheduler = new HashedWheelTimeoutScheduler();
 
-    private InPacketHandler packetHandler;
-    private SSLContext sslContext;
-    private Configuration configuration;
+    protected InPacketHandler packetHandler;
+    protected SSLContext sslContext;
+    protected Configuration configuration;
 
     @Override
     public void handlerAdded(ChannelHandlerContext ctx) {
