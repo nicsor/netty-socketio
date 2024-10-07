@@ -1,0 +1,11 @@
+jdk:
+  - openjdk17
+before_install:
+  - echo "Running before install"
+  - mvn --version
+install:
+  - echo "Running install"
+  - sdk install maven 3.8.1
+  - sdk use maven 3.8.1
+  - mvn --version
+  - mvn install
