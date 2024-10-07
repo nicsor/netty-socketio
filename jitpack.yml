@@ -1,8 +1,12 @@
+jdk:
+  - openjdk17
 build:
   before_install:
+    - echo "Running before install"
     - mvn --version
   install:
-    - MAVEN_VERSION=3.6.3
-    - curl -sSL https://get.maven.org/mvn-${MAVEN_VERSION}-bin.tar.gz | tar zx
-    - export PATH=$PWD/mvn-${MAVEN_VERSION}/bin:$PATH
+    - echo "Running install"
+    - sdk install maven 3.8.1
+    - sdk use maven 3.8.1
+    - mvn --version
     - mvn install
