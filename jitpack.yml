@@ -1,0 +1,8 @@
+build:
+  before_install:
+    - mvn --version
+  install:
+    - MAVEN_VERSION=3.6.3
+    - curl -sSL https://get.maven.org/mvn-${MAVEN_VERSION}-bin.tar.gz | tar zx
+    - export PATH=$PWD/mvn-${MAVEN_VERSION}/bin:$PATH
+    - mvn install
