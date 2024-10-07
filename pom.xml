@@ -351,7 +351,7 @@
         https://maven.apache.org/plugins/maven-compiler-plugin/examples/module-info.html-->
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.13.0</version>
+        <version>3.12.1</version>
         <executions>
           <execution>
             <id>default-compile</id>
@@ -384,7 +384,7 @@
         </executions>
         <!-- defaults for compile and testCompile -->
         <configuration>
-          <release>8</release><!-- or 7 or 8 depending on compatibility expectations -->
+          <release>7</release><!-- or 7 or 8 depending on compatibility expectations -->
         </configuration>
       </plugin>
 
